@@ -35,7 +35,7 @@ namespace StockSystem
                     return true;
                 } else { return false; }
             }
-
+        
             mySqlDataReader.Close();
             return false;
         }
