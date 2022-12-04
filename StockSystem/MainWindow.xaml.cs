@@ -61,6 +61,8 @@ namespace StockSystem
             //codigo para hacer consuta en mysql
             if (SQL.checkUser(user, password))
             {
+                
+            }
                 //ABRE VENTANA PRINCIPAL
                 PaginaPrincipal ventanaPrincipal = new PaginaPrincipal();
                 this.Hide();
