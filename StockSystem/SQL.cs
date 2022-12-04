@@ -22,7 +22,6 @@ namespace StockSystem
                 connectedSql = true;
             } catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
                 connectedSql = false;
             }
         }
