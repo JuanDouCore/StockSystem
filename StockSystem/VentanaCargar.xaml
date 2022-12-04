@@ -6,8 +6,22 @@
         xmlns:local="clr-namespace:StockSystem"
         mc:Ignorable="d"
         Title="VentanaCargar" Height="450" Width="800">
-    <Grid>
-        <Label Content="CARGA DE PRODUCTOS" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="54" Width="217"/>
+    <Grid x:Name="CargaProductoNombre1" Background="#FF55988A">
+        <Label Content="CARGA DE PRODUCTOS" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Height="27" Width="252" FontSize="18" FontFamily="Arial Black"/>
+        <Label Content="Marca&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,81,0,0" VerticalAlignment="Top" Height="28"/>
+        <Label Content="STOCK SYSTEM" HorizontalAlignment="Left" Margin="294,0,0,0" VerticalAlignment="Top" Height="40" Width="223" FontSize="24" FontFamily="Arial Black" FontWeight="Bold"/>
+        <TextBox x:Name="CargaProductoNombre" HorizontalAlignment="Left" Margin="95,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" Background="#FFF3F5C4"/>
+        <Label Content="Modelo&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,114,0,0" VerticalAlignment="Top" Height="26" Width="50"/>
+        <TextBox x:Name="CargaProductoModelo" HorizontalAlignment="Left" Margin="95,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" Background="#FFF3F5C4"/>
+        <Label Content="Descripcion" HorizontalAlignment="Left" Margin="10,292,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CargaProductoDescripcion" HorizontalAlignment="Left" Margin="95,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Height="106" TextChanged="CargaProductoDescripcion_TextChanged"/>
+        <Label Content="Codigo&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,145,0,0" VerticalAlignment="Top" Height="25" Width="50"/>
+        <TextBox x:Name="CargaProductoCodigo" HorizontalAlignment="Left" Margin="95,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFF3F5C4"/>
+        <Label Content="Stock&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,175,0,0" VerticalAlignment="Top" Height="27" Width="39"/>
+        <TextBox x:Name="CargaProductoStock" HorizontalAlignment="Left" Margin="95,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_1" Background="#FFF3F5C4"/>
+        <Label Content="Precio" HorizontalAlignment="Left" Margin="19,207,0,0" VerticalAlignment="Top" Width="44"/>
+        <TextBox x:Name="CargaProductoPrecio" HorizontalAlignment="Left" Margin="95,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFF3F5C4"/>
+        <Button x:Name="CargaProductoBotonCrear" Content="CARGAR PRODUCTO" HorizontalAlignment="Left" Margin="566,314,0,0" VerticalAlignment="Top" Height="78" Width="164" Click="Button_Click" Background="#FF44BB7C"/>
 
     </Grid>
 </Window>
