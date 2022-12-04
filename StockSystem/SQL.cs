@@ -11,6 +11,7 @@ namespace StockSystem
     class SQL
     {
         public static bool connectedSql;
+        public static bool isConnected;
 
         static MySqlConnection connectionSql = new MySqlConnection("server=db4free.net;port=3306;user id=usuariostock;password=hola12345;database=stocksystem;");
 
@@ -22,6 +23,7 @@ namespace StockSystem
                 connectedSql = true;
             } catch (Exception ex)
             {
+
                 connectedSql = false;
             }
         }
