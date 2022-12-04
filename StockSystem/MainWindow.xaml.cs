@@ -22,16 +22,28 @@ namespace StockSystem
     {
         public MainWindow()
         {
+
+            //instancia de conexion sql
+            SQL.connectSql();
+            if(!SQL.connectedSql)
+            {
+                MessageBox.Show("AVISO\nLA CONEXION A LA BASE DE DATOS FALLO.");
+            }
+            //
+
             InitializeComponent();
         }
 
+
+
+
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-                if (userLabel.Text == "" && passwordLabel.Password == "")
-                {
-                    MessageBox.Show("POR FAVOR INGRESE DATOS");
-                    return;
-                }
+            if (userLabel.Text == "" && passwordLabel.Password == "")
+              {
+                 MessageBox.Show("POR FAVOR INGRESE DATOS");
+                 return;
+              }
 
             if (userLabel.Text == "" || passwordLabel.Password == "")
             {
@@ -39,6 +51,11 @@ namespace StockSystem
                 return;
             }
 
+
+            string user = userLabel.Text;
+            string password = passwordLabel.Password;
+
+            //codigo para hacer consuta en mysql
 
         }
     }
