@@ -8,21 +8,21 @@
         Title="PaginaPrincipal" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/AGU4Z3VFFRDT5LTXX6ULOZPWMA.jpg"/>
+            <ImageBrush/>
         </Grid.Background>
         <Rectangle Stroke="Black" Margin="110,79,110,51"/>
-        <Rectangle Stroke="Black" Margin="176,117,176,166"/>
-        <Button x:Name="botonCargarProducto" Content="CARGAR PRODUCTO" HorizontalAlignment="Left" Margin="468,139,0,0" VerticalAlignment="Top" Click="Button_Click" Width="139" Foreground="Black" BorderBrush="{x:Null}" FontFamily="Arial Black">
+        <Rectangle Stroke="Black" Margin="176,117,176,136"/>
+        <Button x:Name="botonCargarProducto" Content="CARGAR PRODUCTO" HorizontalAlignment="Left" Margin="468,139,0,0" VerticalAlignment="Top" Width="139" Foreground="Black" BorderBrush="{x:Null}" FontFamily="Arial Black" Click="botonCargarProducto_Click">
             <Button.Background>
                 <ImageBrush Stretch="None"/>
             </Button.Background>
         </Button>
-        <Button x:Name="botonCargarVenta" Content="CARGAR VENTA" HorizontalAlignment="Left" Margin="468,231,0,0" VerticalAlignment="Top" Click="Button_Click" Width="139" BorderBrush="{x:Null}" FontFamily="Arial Black" Foreground="Black">
+        <Button x:Name="botonCargarVenta" Content="CARGAR VENTA" HorizontalAlignment="Left" Margin="468,244,0,0" VerticalAlignment="Top" Width="139" BorderBrush="{x:Null}" FontFamily="Arial Black" Foreground="Black">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="botonEditarProducto" Content="EDITAR PRODUCTO" HorizontalAlignment="Left" Margin="468,182,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.087,0.754" Width="139" Click="Button_Click_1" FontFamily="Arial Black">
+        <Button x:Name="botonEditarProducto" Content="EDITAR PRODUCTO" HorizontalAlignment="Left" Margin="468,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.087,0.754" Width="139" FontFamily="Arial Black">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>
@@ -32,7 +32,7 @@
         </Button>
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="29" FontSize="22" FontFamily="Arial Black" Foreground="#FF20CCF9" Margin="0,25,0,0"><Run Language="es-es" Text=" "/><Run Text="STOCK SYSTEM"/></TextBlock>
         <Label Content="INGRESA CODIGO DE PRODUCTO&#xD;&#xA;" HorizontalAlignment="Left" Margin="186,148,0,0" VerticalAlignment="Top" Height="28" FontFamily="Arial Black"/>
-        <TextBox x:Name="inputIngresarCodigo" HorizontalAlignment="Left" Margin="186,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" TextChanged="TextBox_TextChanged" Height="33" FontSize="18" BorderBrush="#FF049DED" Background="{x:Null}"/>
-        <Button x:Name="botonListarProductos" Content="LISTAR PRODUCTOS&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,303,0,0" VerticalAlignment="Top" Width="344" Height="26" BorderBrush="{x:Null}" FontFamily="Arial Black" FontSize="16" Background="{x:Null}"/>
+        <TextBox x:Name="inputIngresarCodigo" HorizontalAlignment="Left" Margin="186,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Height="33" FontSize="18" BorderBrush="#FF049DED" Background="{x:Null}" TextChanged="inputIngresarCodigo_TextChanged"/>
+        <Button x:Name="botonListarProductos" Content="LISTAR PRODUCTOS&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,326,0,0" VerticalAlignment="Top" Width="344" Height="26" BorderBrush="{x:Null}" FontFamily="Arial Black" FontSize="16" Background="{x:Null}"/>
     </Grid>
 </Window>

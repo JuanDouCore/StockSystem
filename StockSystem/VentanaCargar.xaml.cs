@@ -15,24 +15,13 @@ using System.Windows.Shapes;
 namespace StockSystem
 {
     /// <summary>
-    /// Lógica de interacción para PaginaPrincipal.xaml
+    /// Interaction logic for VentanaCargar.xaml
     /// </summary>
-    public partial class PaginaPrincipal : Window
+    public partial class VentanaCargar : Window
     {
-        public PaginaPrincipal()
+        public VentanaCargar()
         {
             InitializeComponent();
-
-        }
-
-        private void inputIngresarCodigo_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void botonCargarProducto_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }
