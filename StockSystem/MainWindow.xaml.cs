@@ -59,10 +59,26 @@ namespace StockSystem
 
 
             //codigo para hacer consuta en mysql
-            if (SQL.checkUser(user,password))
+            if (SQL.checkUser(user, password))
             {
                 
             }
+                //ABRE VENTANA PRINCIPAL
+                PaginaPrincipal ventanaPrincipal = new PaginaPrincipal();
+                this.Hide();
+                ventanaPrincipal.Show();
+
+                
+            }
+            else MessageBox.Show("Usuario o contraseña incorrectos");
+
+            userLabel.Text = "";
+            passwordLabel.Password = "";
+
+        }
+
+        private void userLabel_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
     }
