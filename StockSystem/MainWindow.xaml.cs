@@ -24,5 +24,22 @@ namespace StockSystem
         {
             InitializeComponent();
         }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+                if (userLabel.Text == "" && passwordLabel.Password == "")
+                {
+                    MessageBox.Show("POR FAVOR INGRESE DATOS");
+                    return;
+                }
+
+            if (userLabel.Text == "" || passwordLabel.Password == "")
+            {
+                MessageBox.Show("POR FAVOR VERIIQUE LOS DATOS INGRESADOS");
+                return;
+            }
+
+
+        }
     }
 }

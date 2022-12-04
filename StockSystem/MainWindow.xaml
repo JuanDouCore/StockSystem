@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StockSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="380">
+    <Grid Background="#FF28CAD6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="183*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="userLabel" HorizontalAlignment="Center" Margin="0,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" Height="33" Background="#FFCAC3C3"/>
+        <PasswordBox x:Name="passwordLabel" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Width="198" Height="33" Background="#FFCAC3C3"/>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="0,0,0,370" Grid.ColumnSpan="2"/>
+        <Label Content="STOCK SYSTEM" HorizontalAlignment="Left" Margin="78,10,0,0" VerticalAlignment="Top" FontFamily="Rockwell Extra Bold" Height="32" Width="224" FontSize="24"/>
+        <Label Content="USUARIO" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="contraseñaLabel" Content="CONTRASEÑA" HorizontalAlignment="Center" Margin="0,191,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="loginButton" Content="INICIAR SESION" HorizontalAlignment="Center" Margin="0,287,0,0" VerticalAlignment="Top" Width="122" Height="39" Background="#FFCAC3C3" FontWeight="Bold" Click="loginButton_Click"/>
 
     </Grid>
 </Window>
