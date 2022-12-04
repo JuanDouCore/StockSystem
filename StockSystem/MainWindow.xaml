@@ -7,9 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="380">
     <Grid Margin="0,0,0,-68">
-        <Grid.Background>
-            <ImageBrush ImageSource="/fondo login.jpg"/>
-        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="183*"/>
             <ColumnDefinition Width="7*"/>
