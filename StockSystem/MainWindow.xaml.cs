@@ -51,12 +51,18 @@ namespace StockSystem
                 return;
             }
 
+            
 
             string user = userLabel.Text;
             string password = passwordLabel.Password;
 
 
+
             //codigo para hacer consuta en mysql
+            if (SQL.checkUser(user,password))
+            {
+                MessageBox.Show("momo la dinastia");
+            }
 
         }
     }
