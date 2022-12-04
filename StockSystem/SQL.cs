@@ -29,7 +29,7 @@ namespace StockSystem
 
         public static bool checkUser(string username, string password)
         {
-            MySqlCommand consultaSql = new MySqlCommand("SELECT * FROM usuarios WHERE username='" + username + "';");
+            MySqlCommand consultaSql = new MySqlCommand("SELECT * FROM usuarios WHERE user='" + username + "';", connectionSql);
             MySqlDataReader mySqlDataReader = consultaSql.ExecuteReader();
 
             if(mySqlDataReader.HasRows && mySqlDataReader.Read()) { 
