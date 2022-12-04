@@ -57,6 +57,7 @@ namespace StockSystem
 
 
             //codigo para hacer consuta en mysql
+       
 
         }
     }

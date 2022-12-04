@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace StockSystem
 {
@@ -11,7 +12,7 @@ namespace StockSystem
     {
         public static bool connectedSql;
 
-        static MySqlConnection connectionSql = new MySqlConnection("server=sql.freedb.tech;port=3306;user id=freedb_usario;password=hmm$Q5DGg*!PgJv;database=freedb_stocksystem;");
+        static MySqlConnection connectionSql = new MySqlConnection("server=db4free.net;port=3306;user id=usuariostock;password=hola12345;database=stocksystem;");
 
         public static void connectSql()
         {
@@ -21,6 +22,7 @@ namespace StockSystem
                 connectedSql = true;
             } catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 connectedSql = false;
             }
         }
