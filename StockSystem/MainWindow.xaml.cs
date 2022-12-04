@@ -55,6 +55,7 @@ namespace StockSystem
             string user = userLabel.Text;
             string password = passwordLabel.Password;
 
+
             //codigo para hacer consuta en mysql
 
         }
