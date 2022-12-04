@@ -42,5 +42,18 @@ namespace StockSystem
             mySqlDataReader.Close();
             return false;
         }
+
+        public static bool checkProduct(string username, string password)
+        {
+            MySqlCommand consultaSql = new MySqlCommand("SELECT * FROM productos WHERE codigo='" + username + "';", connectionSql);
+            MySqlDataReader mySqlDataReader = consultaSql.ExecuteReader();
+
+            if (mySqlDataReader.HasRows && mySqlDataReader.Read()) return true;
+
+            mySqlDataReader.Close();
+            return false;
+        }
+
+
     }
 }
