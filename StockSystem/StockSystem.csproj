@@ -8,17 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="E3826vMXIAYz3e7.jpg" />
-    <None Remove="fondo login.jpg" />
+    <None Remove="3.jpeg" />
+    <None Remove="AGU4Z3VFFRDT5LTXX6ULOZPWMA.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.7" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="E3826vMXIAYz3e7.jpg" />
-    <Resource Include="fondo login.jpg" />
   </ItemGroup>
 
 </Project>

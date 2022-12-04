@@ -65,5 +65,10 @@ namespace StockSystem
             }
 
         }
+
+        private void userLabel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
