@@ -10,9 +10,9 @@
         <Label Content="CARGA DE PRODUCTOS" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Height="27" Width="252" FontSize="18" FontFamily="Arial Black"/>
         <Label Content="Marca&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,81,0,0" VerticalAlignment="Top" Height="28"/>
         <Label Content="STOCK SYSTEM" HorizontalAlignment="Left" Margin="294,0,0,0" VerticalAlignment="Top" Height="40" Width="223" FontSize="24" FontFamily="Arial Black" FontWeight="Bold"/>
-        <TextBox x:Name="CargaProductoNombre" HorizontalAlignment="Left" Margin="95,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" Background="#FFF3F5C4"/>
+        <TextBox x:Name="CargaProductoNombre" HorizontalAlignment="Left" Margin="95,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  Background="#FFF3F5C4"/>
         <Label Content="Modelo&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,114,0,0" VerticalAlignment="Top" Height="26" Width="56"/>
-        <TextBox x:Name="CargaProductoModelo" HorizontalAlignment="Left" Margin="95,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" Background="#FFF3F5C4"/>
+        <TextBox x:Name="CargaProductoModelo" HorizontalAlignment="Left" Margin="95,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  Background="#FFF3F5C4"/>
         <Label Content="Descripcion" HorizontalAlignment="Left" Margin="19,292,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="CargaProductoDescripcion" HorizontalAlignment="Left" Margin="95,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Height="106" TextChanged="CargaProductoDescripcion_TextChanged" Background="#FFF3F5C4"/>
         <Label Content="Codigo&#xD;&#xA;" HorizontalAlignment="Left" Margin="19,145,0,0" VerticalAlignment="Top" Height="25" Width="50"/>

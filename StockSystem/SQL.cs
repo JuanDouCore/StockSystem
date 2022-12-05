@@ -69,9 +69,9 @@ namespace StockSystem
                 double precio = mySqlDataReader.GetDouble("precio");
 
 
-
-                return new Producto(marca, modelo, descripcion, codigo, vendidos, stock, precio);
                 mySqlDataReader.Close();
+                return new Producto(marca, modelo, descripcion, codigo, vendidos, stock, precio);
+            
             }
 
             mySqlDataReader.Close();
