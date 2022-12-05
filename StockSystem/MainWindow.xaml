@@ -17,10 +17,12 @@
         <Label Content="STOCK SYSTEM" HorizontalAlignment="Left" Margin="78,10,0,0" VerticalAlignment="Top" FontFamily="Rockwell Extra Bold" Height="32" Width="224" FontSize="24"/>
         <Label Content="USUARIO" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label x:Name="contraseñaLabel" Content="CONTRASEÑA" HorizontalAlignment="Center" Margin="0,191,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button x:Name="loginButton" Content="INICIAR SESION" HorizontalAlignment="Center" Margin="0,287,0,0" VerticalAlignment="Top" Width="122" Height="39" Background="#FFCAC3C3" FontWeight="Bold" Click="loginButton_Click"/>
         <Rectangle HorizontalAlignment="Center" Height="246" Margin="0,109,0,0" Stroke="Black" VerticalAlignment="Top" Width="266"/>
         <TextBox x:Name="userLabel" HorizontalAlignment="Center" Margin="0,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" Height="29" Background="#FFF3F5C4" FontFamily="Segoe UI Historic" FontSize="14"/>
+        <Button x:Name="loginButton" Content="INICIAR SESION" HorizontalAlignment="Center" Margin="0,287,0,0" VerticalAlignment="Top" Width="122" Height="39" Background="#FFCAC3C3" FontWeight="Bold" Click="loginButton_Click"/>
+
         <PasswordBox x:Name="passwordLabel" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Width="198" Height="29" Background="#FFF3F5C4" FontFamily="Segoe UI Historic" FontSize="14"/>
+        <Button x:Name="buttonAdmin" Content="ADMINISTRADOR" HorizontalAlignment="Center" Margin="0,379,0,0" VerticalAlignment="Top" Width="182" Height="27" Background="#FFCAC3C3" FontWeight="Bold" Click="buttonAdmin_Click"/>
 
     </Grid>
 </Window>

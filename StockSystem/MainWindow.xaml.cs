@@ -20,8 +20,11 @@ namespace StockSystem
     /// </summary>
     public partial class MainWindow : Window
     {
+
+       
         public MainWindow()
         {
+            Instance = this;
 
             //instancia de conexion sql
             SQL.connectSql();
@@ -35,7 +38,7 @@ namespace StockSystem
             this.Title = "StockSystem v0.1";
         }
 
-
+        public static MainWindow Instance { get; private set; }
 
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
@@ -59,8 +62,8 @@ namespace StockSystem
 
             if (SQL.checkUser(user, password))
             {
-                PaginaPrincipal ventanaPrincipal = new PaginaPrincipal();
-                this.Hide();
+                PaginaPrincipal ventanaPrincipal = new PaginaPrincipal(user);
+                this.Close();
                 ventanaPrincipal.Show();
             }
             else { MessageBox.Show("Usuario o contraseña incorrectos"); }
@@ -68,6 +71,11 @@ namespace StockSystem
             userLabel.Text = "";
             passwordLabel.Password = "";
         }
-        
+
+        private void buttonAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            LoginAdmin loginAdminWindow = new LoginAdmin();
+            loginAdminWindow.ShowDialog();
+        }
     }
 }

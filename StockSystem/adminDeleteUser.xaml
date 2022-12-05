@@ -1,0 +1,17 @@
+﻿<Window x:Class="StockSystem.adminDeleteUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StockSystem"
+        mc:Ignorable="d"
+        Title="adminDeleteUser" Height="250" Width="350">
+    <Grid Background="#FF55988A">
+        <Border BorderBrush="Black" BorderThickness="1" Margin="24,30,24,89"/>
+
+        <Label Content="NOMBRE USUARIO" HorizontalAlignment="Center" Margin="0,42,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <TextBox x:Name="userLabel" HorizontalAlignment="Center" Margin="0,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="28" FontSize="14"/>
+        <Button x:Name="deleteButton" Content="ELIMINAR" HorizontalAlignment="Center" Margin="0,163,0,0" VerticalAlignment="Top" Background="#FFCAC3C3" Width="106" Height="33" FontWeight="Bold" FontSize="16" Click="deleteButton_Click"/>
+
+    </Grid>
+</Window>

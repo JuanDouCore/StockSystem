@@ -19,11 +19,22 @@ namespace StockSystem
     /// </summary>
     public partial class PaginaPrincipal : Window
     {
-        public PaginaPrincipal()
+
+        Usuario usuarioActual = null;
+        public PaginaPrincipal(string username)
         {
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             this.Title = "StockSystem | PANEL";
+
+            //leer usuario actual
+            this.usuarioActual = SQL.leerUsuario(username);
+            usuarioText.Text = username;   
+
+            //setear permisos
+            if (!usuarioActual.puedeCrear) botonCargarProducto.IsEnabled = false;
+            if (!usuarioActual.puedeEditar) botonEditarProducto.IsEnabled = false;
+            if (!usuarioActual.puedeEliminar) eliminarButton.IsEnabled = false;
         }
 
 
