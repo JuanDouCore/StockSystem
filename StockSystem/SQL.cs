@@ -163,9 +163,9 @@ namespace StockSystem
                 bool canDelete = mySqlDataReader.GetBoolean("canDelete");
 
 
-
-                return new Usuario(username, password, canCreate, canEdit, canDelete);
                 mySqlDataReader.Close();
+                return new Usuario(username, password, canCreate, canEdit, canDelete);
+                
             }
 
             mySqlDataReader.Close();

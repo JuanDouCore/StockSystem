@@ -40,14 +40,27 @@ namespace StockSystem
 
         private void botonCargarProducto_Click(object sender, RoutedEventArgs e)
         {
+            
+
             //verificador si el codigo ingresado esta vacio o no es un numero
             if (inputIngresarCodigo.Text == "" || checkIfCodeIsNumber()) {
                 MessageBox.Show("POR FAVOR INGRESE UN CODIGO VALIDO.");
                 inputIngresarCodigo.Text = ""; 
                 return; 
             }
+            int codigoCarga = Convert.ToInt32(inputIngresarCodigo.Text);
 
             //resto del codigo
+            if (!SQL.checkProduct(codigoCarga))
+            {
+                VentanaCargar ventanaCarga = new VentanaCargar(codigoCarga);
+                ventanaCarga.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("YA HAY UN PRODUCTO EXISTENTE\nCON ESE CODIGO");
+                inputIngresarCodigo.Text = "";
+            }
         }
 
         private void eliminarButton_Click(object sender, RoutedEventArgs e)
@@ -101,6 +114,11 @@ namespace StockSystem
             } catch { 
                 return true;
             }
+        }
+
+        private void botonListarProductos_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
