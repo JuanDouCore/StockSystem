@@ -23,6 +23,7 @@ namespace StockSystem
         public VentanaEditarProducto(int codigo)
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             this.codigo = codigo;
             Producto productosSeleccionados = SQL.leerProduct(codigo);
 
@@ -48,18 +49,30 @@ namespace StockSystem
             string marca = botonMarcaEditar.Text;
             string modelo = botonModeloEditar.Text;
             string descripcion = botonDescripcionEditar.Text;
+            int codigo;
+            int stock;
+            int vendidos;
+            double precio;
             try
             {
-                int codigo = Convert.ToInt32(botonCodigoEditar.Text);
-                int stock = Convert.ToInt32(botonStockEditar.Text);
-                int vendidos = Convert.ToInt32(botonCantVendidosEditar.Text);
-                double precio = Convert.ToDouble(botonPrecioEditar.Text);
+                codigo = Convert.ToInt32(botonCodigoEditar.Text);
+                stock = Convert.ToInt32(botonStockEditar.Text);
+                vendidos = Convert.ToInt32(botonCantVendidosEditar.Text);
+                precio = Convert.ToDouble(botonPrecioEditar.Text);
 
             }catch(Exception ex)
             {
                 MessageBox.Show("Verificar que todos los datos ingresados sean correctos");
+                return;
             }
 
+            Producto productoFinal = new Producto(marca, modelo, descripcion, codigo, stock, vendidos, precio);
+
+            SQL.updateProduct(productoFinal);
+            MessageBox.Show("Se modifico correctamente");
+            this.Close();
+
+                
             
         }
     }
