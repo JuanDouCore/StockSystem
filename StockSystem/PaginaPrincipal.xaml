@@ -7,21 +7,21 @@
         mc:Ignorable="d"
         Title="PaginaPrincipal" Height="450" Width="800">
     <Grid Background="#FF55988A">
-        <Rectangle Stroke="Black" Margin="43,79,42,36"/>
+        <Rectangle Stroke="Black" Margin="43,74,42,36"/>
         <Rectangle HorizontalAlignment="Left" Height="55" Margin="400,259,0,0" Stroke="Black" VerticalAlignment="Top" Width="264"/>
-        <Rectangle HorizontalAlignment="Left" Height="207" Margin="122,107,0,0" Stroke="Black" VerticalAlignment="Top" Width="542"/>
-        <Rectangle HorizontalAlignment="Left" Height="152" Margin="400,107,0,0" Stroke="Black" VerticalAlignment="Top" Width="264" RenderTransformOrigin="0.508,0.487"/>
-        <Button x:Name="botonCargarProducto" Content="CARGAR PRODUCTO" HorizontalAlignment="Left" Margin="468,145,0,0" VerticalAlignment="Top" Width="139" Foreground="Black" BorderBrush="Black" FontFamily="Arial Black" Click="botonCargarProducto_Click" Background="#FFCAC3C3"/>
+        <Rectangle HorizontalAlignment="Center" Height="235" Margin="0,84,0,0" Stroke="Black" VerticalAlignment="Top" Width="556"/>
+        <Rectangle HorizontalAlignment="Left" Height="170" Margin="400,89,0,0" Stroke="Black" VerticalAlignment="Top" Width="264" RenderTransformOrigin="0.508,0.487"/>
+        <Button x:Name="botonCargarProducto" Content="CARGAR PRODUCTO" HorizontalAlignment="Left" Margin="468,118,0,0" VerticalAlignment="Top" Width="139" Foreground="Black" BorderBrush="Black" FontFamily="Arial Black" Click="botonCargarProducto_Click" Background="#FFCAC3C3"/>
         <Button x:Name="botonCargarVenta" Content="CARGAR VENTA" HorizontalAlignment="Left" Margin="468,278,0,0" VerticalAlignment="Top" Width="139" BorderBrush="Black" FontFamily="Arial Black" Foreground="Black" Background="#FFCAC3C3" Click="botonCargarVenta_Click"/>
-        <Button x:Name="botonEditarProducto" Content="EDITAR PRODUCTO" HorizontalAlignment="Left" Margin="468,178,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.087,0.754" Width="139" FontFamily="Arial Black" Background="#FFCAC3C3" Click="botonEditarProducto_Click" BorderBrush="Black"/>
+        <Button x:Name="botonEditarProducto" Content="EDITAR PRODUCTO" HorizontalAlignment="Left" Margin="468,156,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.087,0.754" Width="139" FontFamily="Arial Black" Background="#FFCAC3C3" Click="botonEditarProducto_Click" BorderBrush="Black"/>
         <TextBlock x:Name="STOCK_SYSTEM_nsistema_de_stock_de_productos_electronicos" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="26" FontSize="22" FontFamily="Rockwell Extra Bold" Foreground="Black" Margin="0,10,0,0" Text="STOCK SYSTEM" FontWeight="Bold"/>
         <Label Content="INGRESA CODIGO DE PRODUCTO&#xD;&#xA;" HorizontalAlignment="Left" Margin="135,158,0,0" VerticalAlignment="Top" Height="28" FontFamily="Arial Black"/>
         <TextBox x:Name="inputIngresarCodigo" HorizontalAlignment="Left" Margin="135,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Height="33" FontSize="18" BorderBrush="#FF049DED" Background="#FFF3F5C4"/>
         <Button x:Name="botonListarProductos" Content="LISTAR PRODUCTOS&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,341,0,0" VerticalAlignment="Top" Width="344" Height="26" BorderBrush="Black" FontFamily="Arial Black" FontSize="16" Background="#FFCAC3C3"/>
-        <Button x:Name="eliminarButton" Content="ELIMINAR" HorizontalAlignment="Left" Margin="468,211,0,0" VerticalAlignment="Top" Width="139" Background="#FFCAC3C3" FontWeight="Bold" FontFamily="Arial Black" BorderBrush="Black" Click="eliminarButton_Click"/>
-        <Label x:Name="PRODUCTO" Content="PRODUCTO" HorizontalAlignment="Left" Margin="495,107,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black"/>
+        <Button x:Name="eliminarButton" Content="ELIMINAR" HorizontalAlignment="Left" Margin="468,190,0,0" VerticalAlignment="Top" Width="139" Background="#FFCAC3C3" FontWeight="Bold" FontFamily="Arial Black" BorderBrush="Black" Click="eliminarButton_Click"/>
+        <Label x:Name="PRODUCTO" Content="PRODUCTO" HorizontalAlignment="Left" Margin="495,89,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black"/>
         <Label Content="Sistema de stock de productos electronicos" HorizontalAlignment="Left" Margin="230,36,0,0" VerticalAlignment="Top" FontFamily="Rockwell Extra Bold" FontSize="14"/>
-        <Border BorderBrush="Black" BorderThickness="1" Margin="645,4,42,360"/>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="645,0,42,371"/>
         <Label Content="USUARIO" HorizontalAlignment="Left" Margin="664,4,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -33,6 +33,7 @@
             </Label.RenderTransform>
         </Label>
         <TextBlock x:Name="usuarioText" HorizontalAlignment="Left" Margin="679,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial Black"/>
+        <Button x:Name="agregarStockButton" Content="AGREGAR STOCK" HorizontalAlignment="Left" Margin="468,225,0,0" VerticalAlignment="Top" Width="139" Background="#FFCAC3C3" FontWeight="Bold" FontFamily="Arial Black" BorderBrush="Black" Click="eliminarButton_Click"/>
 
 
     </Grid>
