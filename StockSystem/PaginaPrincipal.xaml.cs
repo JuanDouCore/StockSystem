@@ -145,5 +145,11 @@ namespace StockSystem
         {
 
         }
+
+        private void botonListarProductos_Click_1(object sender, RoutedEventArgs e)
+        {
+            Listado listado = new Listado();
+            listado.ShowDialog();
+        }
     }
 }

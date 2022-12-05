@@ -1,0 +1,30 @@
+﻿<Window x:Class="StockSystem.Listado"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StockSystem"
+        mc:Ignorable="d"
+        Title="Listado" Height="450" Width="800">
+    <Grid Background="#FF55988A">
+        <DataGrid x:Name="listado" AutoGenerateColumns="False" Margin="102,26,102,25" RenderTransformOrigin="0.5,0.5" Background="#FFCAC3C3" BorderBrush="#FF7F8386">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="CODIGO" Binding="{Binding codigo}" CanUserResize="False"/>
+                <DataGridTextColumn Header="MARCA" Binding="{Binding marca}" CanUserResize="False"/>
+                <DataGridTextColumn Header="MODELO" Binding="{Binding modelo}" CanUserResize="False"/>
+                <DataGridTextColumn CanUserResize="False" Header="DESCRIPCION" Binding="{Binding descripcion}" MaxWidth="250" MinWidth="250"/>
+                <DataGridTextColumn Header="STOCK" Binding="{Binding stock}" CanUserResize="False"/>
+                <DataGridTextColumn Header="VENDIDOS" Binding="{Binding vendidos}" CanUserResize="False"/>
+                <DataGridTextColumn Header="PRECIO" Binding="{Binding precio}" CanUserResize="False"/>
+            </DataGrid.Columns>
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
+    </Grid>
+</Window>

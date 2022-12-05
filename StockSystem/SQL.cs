@@ -114,7 +114,29 @@ namespace StockSystem
             consultaSql.ExecuteNonQuery();
         }
 
+        public static List<Producto> listarProductos()
+        {
+            MySqlCommand consultaSql = new MySqlCommand("SELECT * FROM productos;", connectionSql);
+            MySqlDataReader mySqlDataReader = consultaSql.ExecuteReader();
 
+            List<Producto> productos = new List<Producto>();
+
+            while (mySqlDataReader.Read())
+            {
+                string marca = mySqlDataReader.GetString("marca");
+                string modelo = mySqlDataReader.GetString("modelo");
+                string descripcion = mySqlDataReader.GetString("descripcion");
+                int codigo = mySqlDataReader.GetInt32("codigo");
+                int stock = mySqlDataReader.GetInt32("stock");
+                int vendidos = mySqlDataReader.GetInt32("vendidos");
+                double precio = mySqlDataReader.GetDouble("precio");
+
+                productos.Add(new Producto(marca, modelo, descripcion, codigo, vendidos, stock, precio));
+            }
+
+            mySqlDataReader.Close();
+            return productos;
+        }
 
         // USERS MANEGMENT SECTION
         public static void crearUsuario(Usuario usuario)
