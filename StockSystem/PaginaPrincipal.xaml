@@ -21,8 +21,17 @@
         <Button x:Name="eliminarButton" Content="ELIMINAR" HorizontalAlignment="Left" Margin="468,211,0,0" VerticalAlignment="Top" Width="139" Background="#FFCAC3C3" FontWeight="Bold" FontFamily="Arial Black" BorderBrush="Black" Click="eliminarButton_Click"/>
         <Label x:Name="PRODUCTO" Content="PRODUCTO" HorizontalAlignment="Left" Margin="495,107,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black"/>
         <Label Content="Sistema de stock de productos electronicos" HorizontalAlignment="Left" Margin="230,36,0,0" VerticalAlignment="Top" FontFamily="Rockwell Extra Bold" FontSize="14"/>
-        <Border BorderBrush="Black" BorderThickness="1" Margin="645,12,42,384"/>
-        <Label Content="USUARIO" HorizontalAlignment="Left" Margin="664,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black"/>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="645,4,42,360"/>
+        <Label Content="USUARIO" HorizontalAlignment="Left" Margin="664,4,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="1.195"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
         <TextBlock x:Name="usuarioText" HorizontalAlignment="Left" Margin="679,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial Black"/>
 
 

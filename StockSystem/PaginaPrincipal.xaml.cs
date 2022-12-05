@@ -79,7 +79,8 @@ namespace StockSystem
             if (SQL.checkProduct(codigoCarga))
             {
                 SQL.deleteProduct(codigoCarga);
-                MessageBox.Show("Producto eliminado correctamente")
+                MessageBox.Show("Producto eliminado correctamente");
+                inputIngresarCodigo.Text= "";
             }
             else
             {
@@ -108,7 +109,7 @@ namespace StockSystem
             }
             else
             {
-                MessageBox.Show("el mono");
+                MessageBox.Show("No existe producto seleccionado");
             }
 
             //resto del codigo
