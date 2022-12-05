@@ -26,7 +26,7 @@ namespace StockSystem
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             this.codigo = codigo;
             Producto productosSeleccionados = SQL.leerProduct(codigo);
-
+            
             botonMarcaEditar.Text = productosSeleccionados.marca;
             botonModeloEditar.Text = productosSeleccionados.modelo;
             botonDescripcionEditar.Text = productosSeleccionados.descripcion;
@@ -34,8 +34,9 @@ namespace StockSystem
             botonStockEditar.Text = productosSeleccionados.stock.ToString();
             botonCantVendidosEditar.Text = productosSeleccionados.vendidos.ToString();
             botonPrecioEditar.Text = productosSeleccionados.precio.ToString();
+            
 
-           
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
