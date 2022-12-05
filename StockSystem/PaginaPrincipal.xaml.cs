@@ -22,17 +22,74 @@ namespace StockSystem
         public PaginaPrincipal()
         {
             InitializeComponent();
-
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            this.Title = "StockSystem | PANEL";
         }
 
-        private void inputIngresarCodigo_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         private void botonCargarProducto_Click(object sender, RoutedEventArgs e)
         {
-            
+            //verificador si el codigo ingresado esta vacio o no es un numero
+            if (inputIngresarCodigo.Text == "" || checkIfCodeIsNumber()) {
+                MessageBox.Show("POR FAVOR INGRESE UN CODIGO VALIDO.");
+                inputIngresarCodigo.Text = ""; 
+                return; 
+            }
+
+            //resto del codigo
+        }
+
+        private void eliminarButton_Click(object sender, RoutedEventArgs e)
+        {
+            //verificador si el codigo ingresado esta vacio o no es un numero
+            if (inputIngresarCodigo.Text == "" || checkIfCodeIsNumber())
+            {
+                MessageBox.Show("POR FAVOR INGRESE UN CODIGO VALIDO.");
+                inputIngresarCodigo.Text = "";
+                return;
+            }
+
+            //resto del codigo
+        }
+
+        private void botonEditarProducto_Click(object sender, RoutedEventArgs e)
+        {
+            //verificador si el codigo ingresado esta vacio o no es un numero
+            if (inputIngresarCodigo.Text == "" || checkIfCodeIsNumber())
+            {
+                MessageBox.Show("POR FAVOR INGRESE UN CODIGO VALIDO.");
+                inputIngresarCodigo.Text = "";
+                return;
+            }
+
+            //resto del codigo
+        }
+
+        private void botonCargarVenta_Click(object sender, RoutedEventArgs e)
+        {
+
+            //verificador si el codigo ingresado esta vacio o no es un numero
+            if (inputIngresarCodigo.Text == "" || checkIfCodeIsNumber())
+            {
+                MessageBox.Show("POR FAVOR INGRESE UN CODIGO VALIDO.");
+                inputIngresarCodigo.Text = "";
+                return;
+            }
+
+
+            //resto del codigo
+
+        }
+
+        private bool checkIfCodeIsNumber()
+        {
+            try
+            {
+                int a = Convert.ToInt32(inputIngresarCodigo.Text); 
+                return false;
+            } catch { 
+                return true;
+            }
         }
     }
 }

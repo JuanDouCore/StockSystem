@@ -25,13 +25,14 @@ namespace StockSystem
 
             //instancia de conexion sql
             SQL.connectSql();
-            if(!SQL.connectedSql)
+            if (!SQL.connectedSql)
             {
                 MessageBox.Show("AVISO\nLA CONEXION A LA BASE DE DATOS FALLO.");
             }
-            //
 
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            this.Title = "StockSystem v0.1";
         }
 
 
@@ -40,46 +41,33 @@ namespace StockSystem
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
             if (userLabel.Text == "" && passwordLabel.Password == "")
-              {
-                 MessageBox.Show("POR FAVOR INGRESE DATOS");
-                 return;
-              }
-
-            if (userLabel.Text == "" || passwordLabel.Password == "")
             {
-                MessageBox.Show("POR FAVOR VERIIQUE LOS DATOS INGRESADOS");
+                MessageBox.Show("POR FAVOR INGRESE DATOS");
                 return;
             }
 
-            
+            if (userLabel.Text == "" || passwordLabel.Password == "")
+            {
+                userLabel.Text = "";
+                passwordLabel.Password = "";
+                MessageBox.Show("POR FAVOR VERIFIQUE LOS DATOS INGRESADOS");
+                return;
+            }
 
             string user = userLabel.Text;
             string password = passwordLabel.Password;
 
-
-
-            //codigo para hacer consuta en mysql
             if (SQL.checkUser(user, password))
             {
-                
-            }
-                //ABRE VENTANA PRINCIPAL
                 PaginaPrincipal ventanaPrincipal = new PaginaPrincipal();
                 this.Hide();
                 ventanaPrincipal.Show();
-
-                
             }
-            else MessageBox.Show("Usuario o contraseña incorrectos");
+            else { MessageBox.Show("Usuario o contraseña incorrectos"); }
 
             userLabel.Text = "";
             passwordLabel.Password = "";
-
         }
-
-        private void userLabel_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+        
     }
 }
