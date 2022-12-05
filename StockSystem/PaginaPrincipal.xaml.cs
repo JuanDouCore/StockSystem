@@ -74,6 +74,19 @@ namespace StockSystem
             }
 
             //resto del codigo
+            int codigoCarga = Convert.ToInt32(inputIngresarCodigo.Text);
+
+            if (SQL.checkProduct(codigoCarga))
+            {
+
+
+            }
+            else
+            {
+                MessageBox.Show("el mono");
+            }
+
+
         }
 
         private void botonEditarProducto_Click(object sender, RoutedEventArgs e)
@@ -84,6 +97,18 @@ namespace StockSystem
                 MessageBox.Show("POR FAVOR INGRESE UN CODIGO VALIDO.");
                 inputIngresarCodigo.Text = "";
                 return;
+            }
+
+            int codigoCarga = Convert.ToInt32(inputIngresarCodigo.Text);
+
+            if (SQL.checkProduct(codigoCarga))
+            {
+                VentanaEditarProducto ventanaEditarProduct = new VentanaEditarProducto(codigoCarga);
+                ventanaEditarProduct.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("el mono");
             }
 
             //resto del codigo
