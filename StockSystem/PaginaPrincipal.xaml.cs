@@ -78,12 +78,12 @@ namespace StockSystem
 
             if (SQL.checkProduct(codigoCarga))
             {
-
-
+                SQL.deleteProduct(codigoCarga);
+                MessageBox.Show("Producto eliminado correctamente")
             }
             else
             {
-                MessageBox.Show("el mono");
+                MessageBox.Show("No existe producto con el codigo seleccionado");
             }
 
 
