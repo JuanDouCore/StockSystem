@@ -23,7 +23,6 @@ namespace StockSystem
                 connectedSql = true;
             } catch (Exception ex)
             {
-
                 connectedSql = false;
             }
         }
@@ -92,5 +91,27 @@ namespace StockSystem
 
             consultaSql.ExecuteNonQuery();
         }
+
+        public static void updateProduct(Producto producto)
+        {
+            MySqlCommand consultaSql = new MySqlCommand("UPDATE productos SET codigo=@codigo,marca=@marca,modelo=@modelo,descripcion=@descripcion,vendidos=@vendidos,stock=@stock,precio=@precio WHERE codigo=" + producto.codigo + ";");
+
+            consultaSql.Parameters.Add(new MySqlParameter("@codigo", producto.codigo));
+            consultaSql.Parameters.Add(new MySqlParameter("@marca", producto.marca));
+            consultaSql.Parameters.Add(new MySqlParameter("@modelo", producto.modelo));
+            consultaSql.Parameters.Add(new MySqlParameter("@descripcion", producto.descripcion));
+            consultaSql.Parameters.Add(new MySqlParameter("@vendidos", producto.vendidos));
+            consultaSql.Parameters.Add(new MySqlParameter("@stock", producto.stock));
+            consultaSql.Parameters.Add(new MySqlParameter("@precio", producto.precio));
+
+            consultaSql.ExecuteNonQuery();
+        }
+
+        public static void deleteProduct(int codigo)
+        {
+            MySqlCommand consultaSql = new MySqlCommand("DELETE FROM productos WHERE codigo=" + codigo + ";");
+            consultaSql.ExecuteNonQuery();
+        }
+
     }
 }
