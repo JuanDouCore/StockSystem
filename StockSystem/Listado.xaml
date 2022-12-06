@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StockSystem"
         mc:Ignorable="d"
-        Title="Listado" Height="450" Width="800">
+        Title="Listado" Height="400" Width="720">
     <Grid Background="#FF55988A">
-        <DataGrid x:Name="listado" AutoGenerateColumns="False" Margin="102,26,102,25" RenderTransformOrigin="0.5,0.5" Background="#FFCAC3C3" BorderBrush="#FF7F8386">
+        <DataGrid x:Name="listado" AutoGenerateColumns="False" Margin="62,41,62,10" RenderTransformOrigin="0.5,0.5" Background="#FFCAC3C3" BorderBrush="#FF7F8386">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="CODIGO" Binding="{Binding codigo}" CanUserResize="False"/>
                 <DataGridTextColumn Header="MARCA" Binding="{Binding marca}" CanUserResize="False"/>
@@ -26,5 +26,6 @@
                 </TransformGroup>
             </DataGrid.RenderTransform>
         </DataGrid>
+        <Label x:Name="LISTA_DE_PRODUCTOS" Content="LISTA DE PRODUCTOS" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Arial Black"/>
     </Grid>
 </Window>

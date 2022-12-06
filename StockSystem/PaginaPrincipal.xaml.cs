@@ -35,6 +35,7 @@ namespace StockSystem
             if (!usuarioActual.puedeCrear) botonCargarProducto.IsEnabled = false;
             if (!usuarioActual.puedeEditar) botonEditarProducto.IsEnabled = false;
             if (!usuarioActual.puedeEliminar) eliminarButton.IsEnabled = false;
+            if (!usuarioActual.puedeEditar) agregarStock.IsEnabled = false;
         }
 
 
@@ -55,6 +56,7 @@ namespace StockSystem
             {
                 VentanaCargar ventanaCarga = new VentanaCargar(codigoCarga);
                 ventanaCarga.ShowDialog();
+                inputIngresarCodigo.Text = "";
             }
             else
             {
@@ -85,6 +87,7 @@ namespace StockSystem
             else
             {
                 MessageBox.Show("No existe producto con el codigo seleccionado");
+                inputIngresarCodigo.Text = "";
             }
 
 
@@ -106,10 +109,12 @@ namespace StockSystem
             {
                 VentanaEditarProducto ventanaEditarProduct = new VentanaEditarProducto(codigoCarga);
                 ventanaEditarProduct.ShowDialog();
+                inputIngresarCodigo.Text = "";
             }
             else
             {
                 MessageBox.Show("No existe producto seleccionado");
+                inputIngresarCodigo.Text = "";
             }
 
             //resto del codigo
@@ -127,7 +132,19 @@ namespace StockSystem
             }
 
 
-            //resto del codigo
+            int codigoCarga = Convert.ToInt32(inputIngresarCodigo.Text);
+
+            if (SQL.checkProduct(codigoCarga))
+            {
+                CargarVenta ventanaEditarProduct = new CargarVenta(codigoCarga);
+                ventanaEditarProduct.ShowDialog();
+                inputIngresarCodigo.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("No existe producto seleccionado");
+                inputIngresarCodigo.Text = "";
+            }
 
         }
 
@@ -142,15 +159,36 @@ namespace StockSystem
             }
         }
 
-        private void botonListarProductos_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void botonListarProductos_Click_1(object sender, RoutedEventArgs e)
         {
             Listado listado = new Listado();
             listado.ShowDialog();
         }
+
+        private void botonAgregarStock_Click(object sender, RoutedEventArgs e)
+        {
+            if (inputIngresarCodigo.Text == "" || checkIfCodeIsNumber())
+            {
+                MessageBox.Show("POR FAVOR INGRESE UN CODIGO VALIDO.");
+                inputIngresarCodigo.Text = "";
+                return;
+            }
+
+            int codigoCarga = Convert.ToInt32(inputIngresarCodigo.Text);
+
+            if (SQL.checkProduct(codigoCarga))
+            {
+                AgregarStock agregarStock = new AgregarStock(codigoCarga);
+                agregarStock.ShowDialog();
+                inputIngresarCodigo.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("No existe producto seleccionado");
+                inputIngresarCodigo.Text = "";
+            }
+        }
+
+       
     }
 }

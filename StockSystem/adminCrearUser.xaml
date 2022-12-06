@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="adminCrearUser" Height="450" Width="500">
     <Grid Background="#FF55988A">
-        <Border BorderBrush="Black" BorderThickness="1" Margin="44,58,61,123"/>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="44,58,61,130"/>
 
 
 
@@ -15,7 +15,7 @@
         <TextBox x:Name="userLabel" HorizontalAlignment="Left" Margin="180,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="31" FontSize="14" Background="#FFF3F5C4"/>
         <Label Content="CONTRASEÑA" HorizontalAlignment="Left" Margin="44,157,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         <TextBox x:Name="passwordLabel" HorizontalAlignment="Left" Margin="180,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="31" FontSize="14" Background="#FFF3F5C4"/>
-        <Button x:Name="crearButton" Content="CREAR USUARIO" HorizontalAlignment="Center" Margin="0,335,0,0" VerticalAlignment="Top" Background="#FFCAC3C3" Width="189" Height="43" FontSize="16" FontWeight="Bold" Click="crearButton_Click"/>
+        <Button x:Name="crearButton" Content="CREAR USUARIO" HorizontalAlignment="Left" Margin="147,321,0,0" VerticalAlignment="Top" Background="#FFCAC3C3" Width="189" Height="43" FontSize="16" FontWeight="Bold" Click="crearButton_Click"/>
         <CheckBox x:Name="checkCrear" Content="CARGAR PRODUCTOS" HorizontalAlignment="Left" Margin="59,217,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         <CheckBox x:Name="checkEditar" Content="EDITAR PRODUCTOS" HorizontalAlignment="Left" Margin="59,242,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         <CheckBox x:Name="checkDelete" Content="ELIMINAR PRODUCTOS" HorizontalAlignment="Left" Margin="59,267,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>

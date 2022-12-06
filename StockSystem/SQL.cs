@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -25,6 +26,20 @@ namespace StockSystem
             {
                 connectedSql = false;
             }
+        }
+
+
+        public static void checkStatusDatabase() {
+            while (true)
+            {
+                if (connectionSql.State != System.Data.ConnectionState.Open) {
+                    MessageBox.Show("HA OCURRIDO UN ERROR EN LA CONEXION DE DATOS.");
+                    MainWindow.Instance.Close();
+                    break;
+                }
+                Thread.Sleep(60000);
+            }
+
         }
 
         public static bool checkUser(string username, string password)

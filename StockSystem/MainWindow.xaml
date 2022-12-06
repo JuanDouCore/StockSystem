@@ -12,7 +12,6 @@
             <ColumnDefinition Width="7*"/>
         </Grid.ColumnDefinitions>
         <Border BorderBrush="Black" BorderThickness="1" Margin="0,0,0,346" Grid.ColumnSpan="2">
-            <Label Content="Sistema de stock de productos electronicos" Margin="29,51,29,16" FontFamily="Rockwell Extra Bold"/>
         </Border>
         <Label Content="STOCK SYSTEM" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Rockwell Extra Bold" Height="32" Width="226" FontSize="24" RenderTransformOrigin="1.067,0.595"/>
         <Label Content="USUARIO" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
@@ -23,6 +22,7 @@
 
         <PasswordBox x:Name="passwordLabel" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Width="198" Height="29" Background="#FFF3F5C4" FontFamily="Segoe UI Historic" FontSize="14"/>
         <Button x:Name="buttonAdmin" Content="ADMINISTRADOR" HorizontalAlignment="Center" Margin="0,379,0,0" VerticalAlignment="Top" Width="182" Height="27" Background="#FFCAC3C3" FontWeight="Bold" Click="buttonAdmin_Click"/>
+        <Label Content="Sistema de stock de productos electronicos" Margin="25,47,-14,309" FontFamily="Rockwell Extra Bold" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

@@ -8,14 +8,14 @@
         Title="VentanaEditarProducto" Height="450" Width="800">
     <Grid Margin="0,0,0,4" RenderTransformOrigin="1.012,0.544" Background="#FF55988A">
         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="216" FontSize="24" FontFamily="Arial Black"><Run Language="es-es" Text="STOCK SYSTEM"/><LineBreak/><Run Language="es-es"/><LineBreak/><Run/></TextBlock>
-        <Label Content="EDITAR PRODUCTO&#xD;&#xA;" HorizontalAlignment="Left" Margin="48,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.442,0.24" FontSize="20" FontFamily="Arial Black" Height="30"/>
-        <Label Content="Marca" HorizontalAlignment="Left" Margin="240,78,0,0" VerticalAlignment="Top" FontSize="18" Width="68" Cursor=""/>
-        <Label Content="Modelo" HorizontalAlignment="Left" Margin="240,118,0,0" VerticalAlignment="Top" FontSize="16" Width="77"/>
-        <Label Content="Stock" HorizontalAlignment="Left" Margin="240,193,0,0" VerticalAlignment="Top" FontSize="18" Width="75" RenderTransformOrigin="0.932,0.545"/>
-        <Label Content="Cantidad de&#xD;&#xA;venidos&#xD;&#xA;" HorizontalAlignment="Left" Margin="240,229,0,0" VerticalAlignment="Top" FontSize="18" Width="111" RenderTransformOrigin="0.932,0.545" Height="55"/>
-        <Label Content="Precio" HorizontalAlignment="Left" Margin="240,284,0,0" VerticalAlignment="Top" FontSize="18" Width="78" RenderTransformOrigin="0.932,0.545"/>
-        <Label Content="Descripcion&#xD;&#xA;" HorizontalAlignment="Left" Margin="240,334,0,0" VerticalAlignment="Top" FontSize="18" Width="107" RenderTransformOrigin="0.932,0.545" Height="38"/>
-        <Label Content="Codigo" HorizontalAlignment="Left" Margin="240,157,0,0" VerticalAlignment="Top" FontSize="18" Width="75"/>
+        <Label Content="EDITAR PRODUCTO&#xD;&#xA;" HorizontalAlignment="Left" Margin="285,26,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.442,0.24" FontSize="20" FontFamily="Arial Black" Height="30"/>
+        <Label Content="Marca" HorizontalAlignment="Left" Margin="240,78,0,0" VerticalAlignment="Top" FontSize="18" Width="68" Cursor="" FontWeight="Bold"/>
+        <Label Content="Modelo" HorizontalAlignment="Left" Margin="240,118,0,0" VerticalAlignment="Top" FontSize="16" Width="77" FontWeight="Bold"/>
+        <Label Content="Stock" HorizontalAlignment="Left" Margin="240,193,0,0" VerticalAlignment="Top" FontSize="18" Width="75" RenderTransformOrigin="0.932,0.545" FontWeight="Bold"/>
+        <Label Content="Cantidad de&#xD;&#xA;venidos&#xD;&#xA;" HorizontalAlignment="Left" Margin="240,229,0,0" VerticalAlignment="Top" FontSize="18" Width="111" RenderTransformOrigin="0.932,0.545" Height="55" FontWeight="Bold"/>
+        <Label Content="Precio" HorizontalAlignment="Left" Margin="240,284,0,0" VerticalAlignment="Top" FontSize="18" Width="78" RenderTransformOrigin="0.932,0.545" FontWeight="Bold"/>
+        <Label Content="Descripcion&#xD;&#xA;" HorizontalAlignment="Left" Margin="240,334,0,0" VerticalAlignment="Top" FontSize="18" Width="107" RenderTransformOrigin="0.932,0.545" Height="38" FontWeight="Bold"/>
+        <Label Content="Codigo" HorizontalAlignment="Left" Margin="240,157,0,0" VerticalAlignment="Top" FontSize="18" Width="75" FontWeight="Bold"/>
         <TextBox x:Name="botonMarcaEditar" HorizontalAlignment="Left" Margin="360,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="31" Background="#FFF3F5C4"  />
         <TextBlock HorizontalAlignment="Left" Height="0" Margin="420,103,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="40"/>
         <TextBox x:Name="botonModeloEditar" HorizontalAlignment="Left" Margin="360,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="31" Background="#FFF3F5C4" />
@@ -24,7 +24,8 @@
         <TextBox x:Name="botonCantVendidosEditar" HorizontalAlignment="Left" Margin="360,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30" RenderTransformOrigin="0.5,-0.165" Background="#FFF3F5C4"/>
         <TextBox x:Name="botonPrecioEditar" HorizontalAlignment="Left" Margin="360,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="31" RenderTransformOrigin="0.458,-0.579" Background="#FFF3F5C4"/>
         <TextBox x:Name="botonDescripcionEditar" HorizontalAlignment="Left" Margin="360,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="76"  Background="#FFF3F5C4"/>
-        <Button x:Name="botonEditarProducto" Content="Button" HorizontalAlignment="Left" Margin="645,315,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button x:Name="botonEditarProducto" Content="CARGAR" HorizontalAlignment="Left" Margin="555,345,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="-0.379,1.455" Width="110" Height="43" FontWeight="Bold" FontFamily="Arial Black" FontSize="16" Background="#FFCAC3C3"/>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="195,65,85,0"/>
 
     </Grid>
 </Window>
